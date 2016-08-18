@@ -1,0 +1,8 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<% if user_signed_in? %>
+<p>The User is logged in</p>
+<% if can? :manage, :Home %>
+<%= link_to "About", home_about_path %>
+<% end %>
+<% end %>
